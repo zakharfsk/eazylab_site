@@ -29,7 +29,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1', 'https://eazylab.pp.ua', 'https://www.eazylab.pp.ua']
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1']
+
 
 # Application definition
 
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'eazylab.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

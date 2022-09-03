@@ -10,7 +10,7 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
-static
+./static
 
 ./f3b431ff5c2e541de894ffec6b0cf76e_venv
 
