@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення</title>
+    <link rel="icon" type="image/png" href="{% static 'img/title-logo.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/order.css' %}">
+</head>
+
+<body>
+<header>
+    <div class="wrapper">
+        <nav class="header-nav">
+            <a class="header-logo" href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}"
+                     alt="Логотип компанії EazyLab">
+            </a>
+            <ul class="header-menu">
+                <li><a href="#"><b>Про сервіс</b></a></li>
+                <li>
+                    <a href="#" class="thirst-btn">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.9539 25.9999C16.4127 25.9999 19.6704 24.6684 22.1274 22.2502C24.5911 19.8253 25.9661 16.5854 25.9994 13.1274C26.033 9.61668 24.6983 6.31686 22.241 3.83569C19.7911 1.36219 16.5093 0 13 0C9.51577 0 6.23879 1.37125 3.7728 3.86113C1.30843 6.34926 -0.0310594 9.63741 0.000562161 13.1204L0 24.5945C0 25.1515 0.328934 25.6559 0.838603 25.8806C1.02074 25.9609 1.21363 25.9999 1.40519 25.9999C1.74959 25.9999 2.08948 25.8733 2.3537 25.6318C2.3537 25.6318 3.65953 24.2412 5.39646 24.2412C5.98793 24.2412 6.58248 24.3751 7.13431 24.6516C8.91953 25.5463 10.8736 25.9999 12.9411 25.9999H12.9539ZM5.39794 21.4295C4.51331 21.4295 3.63346 21.6047 2.81101 21.9463C2.81101 21.9463 2.81144 13.1048 2.81137 13.1003C2.78516 10.3705 3.83583 7.79176 5.76995 5.8391C7.70399 3.88629 10.2717 2.8108 13 2.8108C15.7534 2.8108 18.326 3.87722 20.2438 5.81366C22.1693 7.75775 23.2151 10.3455 23.1886 13.1004C23.1352 18.6646 18.5347 23.1896 12.9423 23.1891C11.3148 23.1891 9.78427 22.8358 8.39362 22.1388C7.44139 21.6615 6.41636 21.4295 5.39794 21.4295Z"
+                                  fill="#FFCC80"></path>
+                            <path d="M20.2378 13.07C20.2378 14.0402 19.4512 14.8267 18.481 14.8267C17.5108 14.8267 16.7243 14.0402 16.7243 13.07C16.7243 12.0998 17.5108 11.3132 18.481 11.3132C19.4513 11.3132 20.2378 12.0998 20.2378 13.07ZM14.6864 13.07C14.6864 14.0402 13.8999 14.8267 12.9297 14.8267C11.9595 14.8267 11.1729 14.0402 11.1729 13.07C11.1729 12.0998 11.9595 11.3132 12.9297 11.3132C13.9 11.3132 14.6864 12.0998 14.6864 13.07ZM9.13509 13.07C9.13509 14.0402 8.34855 14.8267 7.37833 14.8267C6.40812 14.8267 5.62158 14.0402 5.62158 13.07C5.62158 12.0998 6.40812 11.3132 7.37833 11.3132C8.34862 11.3132 9.13509 12.0998 9.13509 13.07Z"
+                                  fill="#FFCC80"></path>
+                        </svg>
+                        Підтримка
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <div class="wrapper">
+        <h2 class="order-title">Замовлення роботи (не забудьте вказати як з вами можна зв'язатися)</h2>
+        <form class="order-form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="order-form-left-box">
+                <div class="form-column">
+                    <label>
+                        <p>Тип роботи</p>
+                        <select name="type_work" id="id_type_work" required>
+                            <option value="">Випадаючий список</option>
+                            <option value="Практична робота">Практична робота</option>
+                            <option value="Репетиторство">Репетиторство</option>
+                            <option value="Курсова робота">Курсова робота</option>
+                            <option value="Контрольна робота">Контрольна робота</option>
+                            <option value="Реферат">Реферат</option>
+                        </select>
+                    </label>
+                    <label><p>Предмет</p><input type="text" name="subject" id="id_subject"
+                                                placeholder="Введіть предмет" required></label>
+                    <label><p>Назва</p><input type="text" name="name_work" id="id_name_work"
+                                              placeholder="Введіть назву" required></label>
+                    <label><p>Ціна (договіна або сумма)</p><input type="text" name="cost_work" id="id_cost_work"
+                                                                  placeholder="Вкажіть сумму" required></label>
+                    <label><p>Строк здачі</p><input type="date" id="id_deadline" name="deadline" required></label>
+                </div>
+            </div>
+            <div class="order-form-right-box">
+                <div class="form-column">
+                    <label><p>Опис роботи (максимально 1000 символів)</p><textarea name="description_work"
+                                                                                   id="id_description_work"></textarea></label>
+                    <label class="file-label">
+                        <input type="file" name="file_order" id="id_file_order">
+                        <div class="file-btn">
+                            <div class="row">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_37_950)">
+                                        <path d="M12.6891 1.68344C10.9443 -0.0614726 8.10503 -0.0614726 6.35989 1.68344L0.934674 7.10863C-0.311627 8.35507 -0.311545 10.3831 0.934838 11.6295C1.55808 12.2527 2.37648 12.5643 3.19521 12.5643C4.01372 12.5642 4.83255 12.2526 5.45569 11.6295L10.4286 6.65639C10.7909 6.29414 10.9905 5.81248 10.9906 5.30017C10.9906 4.78783 10.7911 4.3062 10.4287 3.94384C9.68082 3.19602 8.46391 3.19604 7.71617 3.94398L4.46404 7.19602C4.21437 7.44567 4.21437 7.8505 4.46399 8.1002C4.71364 8.34993 5.11846 8.34985 5.36816 8.1002L8.62032 4.84812C8.86961 4.59883 9.27518 4.59878 9.5245 4.84807C9.64525 4.96882 9.71177 5.12938 9.71177 5.30014C9.71177 5.47091 9.64527 5.63141 9.5245 5.75222L4.55151 10.7253C3.80364 11.4731 2.58684 11.4732 1.83901 10.7253C1.09119 9.97746 1.09114 8.7606 1.83888 8.01273L7.26407 2.58762C8.51056 1.34118 10.5386 1.34118 11.7849 2.58762C12.3888 3.19137 12.7213 3.99415 12.7213 4.84802C12.7213 5.70188 12.3887 6.50466 11.7849 7.10847L6.35981 12.5337C6.11016 12.7834 6.11016 13.1882 6.35987 13.4379C6.48472 13.5628 6.64834 13.6252 6.81194 13.6252C6.97557 13.6252 7.13919 13.5627 7.26404 13.4379L12.6891 8.01267C13.5344 7.16739 14 6.04351 14 4.84804C14 3.6526 13.5344 2.52872 12.6891 1.68344Z"
+                                              fill="white"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_37_950">
+                                            <rect width="14" height="14" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>Додати файл (прикріпити можна тільки 1)</p>
+                            </div>
+                        </div>
+                    </label>
+                    <div class="add-file">
+                        <p>Додані файли:</p>
+                        <div id="add-file-p">
+                            <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8928 4.75001C12.518 4.75001 12.2142 4.4462 12.2142 4.07143V0H4.07136C2.94706 0 2.03564 0.911419 2.03564 2.03571V16.9643C2.03564 18.0886 2.94706 19 4.07136 19H14.9285C16.0528 19 16.9642 18.0886 16.9642 16.9643V4.75001H12.8928Z"
+                                      fill="#3C4852"/>
+                                <path d="M13.5713 0.397705V3.39291H16.5665L13.5713 0.397705Z" fill="#3C4852"/>
+                            </svg>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-btns">
+                <a href="{% url 'home' %}" class="secondary-btn">Назад</a>
+                <label>
+                    <button type="submit" class="primary-btn" name="" value="Замовити">Замовити</button>
+                </label>
+            </div>
+        </form>
+    </div>
+</main>
+{% if status %}
+    <div class="order-popup show-order-popup">
+        <p class="order-fail-text">{{ message }}</p>
+    </div>
+{% endif %}
+<footer>
+    <p class="copy">Всі права захищені</p>
+</footer>
+<script src="{% static 'js/order.js' %}"></script>
+</body>
+
+</html>
