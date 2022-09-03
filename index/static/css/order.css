@@ -1,0 +1,240 @@
+@import url(style.css);
+
+body{
+    background: var(--primary-bg-color);
+}
+header{
+    margin-bottom: 50rem;
+    padding-bottom: 0;
+    background: var(--primary-bg-color);
+}
+.header-nav{
+    padding: 25rem 0;
+}
+main .wrapper{
+    background: var(--second-bg-color);
+    padding: 25rem 70rem 40rem;
+    color: var(--primary-text-color);
+    border-radius: 10px;
+}
+footer{
+    padding: 20rem 0;
+    text-align: center;
+    bottom: 0;
+}
+
+.order-title{
+    margin-bottom: 65rem;
+    font-weight: 700;
+    font-size: 26rem;
+    line-height: 31rem;
+}
+.order-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.order-form label{
+    display: block;
+    width: 100%;
+    margin-bottom: 25rem;
+}
+.order-form label p{
+    margin-bottom: 10rem;
+    font-weight: 600;
+    font-size: 16rem;
+    line-height: 19rem;
+}
+.order-form label:last-child{
+    margin-bottom: 0;
+}
+.order-form input,
+.order-form select,
+.order-form textarea{
+    padding: 18rem 35rem;
+    width: calc(100% - 70rem);
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 19rem;
+    color: var(--primary-input-text-color);
+    background: var(--primary-bg-color);
+    border: 1px solid var(--primary-border-color);
+    border-radius: 10px;
+}
+.order-form select{
+    width: 100%;
+}
+.order-form textarea{
+    height: 200rem;
+    resize: none;
+}
+.order-form input:focus-visible,
+.order-form select:focus-visible,
+.order-form textarea:focus-visible{
+    border: 1px solid var(--second-border-color);
+    outline: 1px var(--second-border-color);
+}
+.file-label input{
+    display: none;
+}
+.file-btn{
+    display: inline-block;
+    padding: 15px 35px;
+    color: var(--third-text-color);
+    background: var(--four-bg-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+.file-btn:hover{
+    color: var(--primary-text-color);
+    background: var(--primary-hover-color);
+}
+.file-btn .row{
+    display: flex;
+    align-items: center;
+}
+.file-btn svg{
+    display: inline-block;
+    margin-right: 20px;
+}
+.order-form .file-btn p{
+    display: inline-block;
+    margin: 0;
+}
+.add-file p:first-child{
+    margin-bottom: 30rem;
+    font-weight: 700;
+    font-size: 17rem;
+    line-height: 20rem;
+}
+.add-file #add-file-p{
+    display: none;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16rem;
+    line-height: 19rem;
+}
+.add-file #add-file-p svg{
+    margin-right: 15px;
+}
+.order-form-left-box,
+.order-form-right-box{
+    display: inline-block;
+    margin-bottom: 75rem;
+    width: 45%;
+    box-sizing: border-box;
+}
+.form-column{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.order-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.order-btns label{
+    width: auto;
+}
+.order-btns .primary-btn{
+    display: inline-block;
+    padding: 20rem 30rem;
+    width: 550rem;
+    font-size: 16rem;
+    font-weight: 800;
+    line-height: 19rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--primary-text-color);
+    background: var(--third-bg-color);
+    border-radius: 10px;
+    border: 1px solid var(--third-bg-color);
+    cursor: pointer;
+    z-index: 2;
+    transition: .5s;
+}
+.order-btns .primary-btn:hover{
+    background: var(--primary-hover-color);
+}
+
+@media screen and (max-width: 650px){
+    .order-form-left-box,
+    .order-form-right-box{
+        display: block;
+        width: 100%;
+    }
+    .order-title{
+        font-size: 35rem;
+        line-height: 40rem;
+    }
+    .order-form label p{
+        font-size: 30rem;
+        line-height: 33rem;
+        margin-bottom: 20rem;
+    }
+    .order-form input,
+    .order-form select,
+    .order-form textarea{
+        padding: 28rem 45rem;
+        font-size: 20rem;
+        line-height: 23rem;
+    }
+    .file-btn{
+        padding: 10px 15px;
+    }
+    .file-btn .row p{
+        font-size: 20rem;
+        line-height: 23rem;
+    }
+    .order-btns {
+        flex-direction: column-reverse;
+    }
+    .order-form .order-btns label{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .order-btns .primary-btn{
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------------------- */
+/*                          popup                           */
+/* -------------------------------------------------------- */
+
+.order-popup{
+    display: none;
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    padding: 20px;
+    font-size: 16px;
+    border: 2px solid var(--second-border-color);
+    background: var(--primary-bg-color);
+    border-radius: 10px;
+    z-index: 15;
+}
+.order-done-text{
+    font-weight: bold;
+    color: rgb(95, 179, 95);
+}
+.order-fail-text{
+    font-weight: bold;
+    color: lightcoral;
+}
+
+.show-order-popup{
+    display: block;
+}
+
+@media screen and (max-width: 650px){
+    .order-popup{
+        left: 10px;
+        bottom: 10px;
+        font-size: 12px;
+        padding: 15px;
+    }
+}

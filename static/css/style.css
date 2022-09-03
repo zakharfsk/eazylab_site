@@ -1,0 +1,797 @@
+@import url(font.css);
+
+:root {
+    /* background */
+    --primary-bg-color: #fff;
+    --second-bg-color: #E5E5E5;
+    --third-bg-color: #FFCC80;
+    --four-bg-color: #3C4852;
+
+    /* text */
+    --primary-text-color: #3C4852;
+    --second-text-color: #99A2A9;
+    --third-text-color: #fff;
+    --hover-text-color: #FFCC80;
+    
+    /* border */
+    --primary-border-color: #E5E5E5;
+    --second-border-color: #FFCC80;
+
+    /* hover */
+    --primary-hover-color: #f3bd6d;
+    --second-hover-color: #FFCC80;
+
+    /* input */
+    --primary-input-text-color: #8E8D8D;;
+}
+*{
+    margin: 0;
+}
+html{
+    font-size: 1px;
+    font-family: 'Panton';
+}
+body{
+    background: var(--primary-bg-color);
+}
+.wrapper{
+    width: 60%;
+    margin: 0 auto;
+}
+h1{
+    font-size: 96rem;
+}
+.primary-btn,
+.secondary-btn{
+    display: inline-block;
+    padding: 20rem 30rem;
+    font-size: 16rem;
+    font-weight: 800;
+    line-height: 19rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: var(--primary-text-color);
+    border-radius: 10px;
+    border: 1px solid var(--third-bg-color);
+    cursor: pointer;
+    z-index: 2;
+    transition: .5s;
+}
+.primary-btn{
+    background: var(--third-bg-color);
+}
+.secondary-btn{
+    background: var(--primary-bg-color);
+}
+.primary-btn:hover{
+    background: var(--primary-hover-color);
+}
+.secondary-btn:hover{
+    background: var(--second-hover-color);
+}
+.thirst-btn:hover{
+    color: var(--hover-text-color);
+}
+/* -------------------------------------------------------- */
+/*                         header                           */
+/* -------------------------------------------------------- */
+header{
+    position: relative;
+    margin-bottom: 140rem;
+    padding-bottom: 335rem;
+    color: var(--primary-text-color);
+    font-size: 18rem;
+}
+.header-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+.header-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 50rem 0;
+    position: relative;
+    z-index: 2;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .5s;
+}
+.header-logo:hover{
+    transform: scale(1.1);
+    color: var(--hover-text-color);
+}
+.header-logo img{
+    width: 173rem;
+}
+.header-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+.header-menu li,
+.phone-header-menu li{
+    display: inline-block;
+    margin-right: 50rem;
+}
+.header-menu li a{
+    padding: 5px;
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: .5s;
+}
+.header-menu .logIn-btn{
+    margin: 0;
+}
+.header-menu li .primary-btn{
+    position: relative;
+    padding: 20rem 30rem;
+    padding-right: 50px;
+}
+.header-menu li:hover .primary-btn{
+    color: var(--primary-text-color);
+}
+.header-menu .primary-btn svg{
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    z-index: 3;
+    cursor: pointer;
+}
+.header-menu li .thirst-btn{
+    padding: 5px;
+    padding-left: 40px;
+}
+
+.header-menu li:hover a{
+    color: var(--hover-text-color);
+}
+.header-menu .primary-btn:hover a{
+    color: var(--primary-text-color);
+}
+.header-info{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 70rem;
+}
+.header-info-text h1{
+    line-height: 115rem;
+    margin-bottom: 25rem;
+}
+.header-info-text p{
+    margin-bottom: 50rem;
+    font-weight: 400;
+    font-size: 36rem;
+    line-height: 43rem;
+}
+.header-info-img{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.header-info-img img{
+    position: absolute;
+    top: -85rem;
+    right: -269rem;
+    width: 700rem;
+}
+.header-spot1{
+    position: absolute;
+    top: 0;
+    left: 55rem;
+}
+.header-spot2{
+    position: absolute;
+    left: 0;
+    bottom: -20rem;
+}
+.header-spot1 img
+{
+    width: 300rem;
+}
+.header-spot2 img
+{
+    width: 233rem;
+}
+
+    
+/* -------------------------------------------------------- */
+/*                          main                            */
+/* -------------------------------------------------------- */
+main{
+    font-size: 20rem;
+    padding-bottom: 115rem;
+}
+section{
+    position: relative;
+    margin-bottom: 130rem;
+    color: var(--primary-text-color);
+}
+section:last-child{
+    margin-bottom: 0;
+}
+.sectionTitle{
+    display: block;
+    margin-bottom: 90rem;
+    position: relative;
+    text-align: center;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    font-size: 60rem;
+    line-height: 72rem;
+}
+.sectionTitle::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -25rem;
+    transform: translateX(-50%);
+    width: 74px;
+    height: 6px;
+    background: var(--third-bg-color);
+    border-radius: 11px;
+}
+
+/* ----------------------------------- */
+/*          serviceAdvantages          */
+/* ----------------------------------- */
+
+.serviceAdvantages .section-content{
+    display: flex;
+    justify-content: space-between;
+}
+.serviceAdvantages figure{
+    max-width: 250rem;
+    text-align: center;
+}
+.serviceAdvantages .svg-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25rem;
+}
+.serviceAdvantages .svg-box svg{
+    height: 250rem;
+}
+
+/* ----------------------------------- */
+/*              stagesWork             */
+/* ----------------------------------- */
+.stagesWork .figure-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50rem;
+}
+    .stagesWork .section-content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+.stagesWork figure{
+    margin-bottom: 50rem;
+    display: inline-block;
+    width: 320rem;
+    text-align: center;
+    font-size: 22rem;
+    line-height: 30rem;
+}
+.stagesWork .img-box{
+    height: 300rem;
+    margin-bottom: 25rem;
+}
+.stagesWork .img-box img{
+    max-height: 300rem;
+    margin-bottom: 25rem;
+}
+.stagesWork span{
+    color: var(--hover-text-color);
+    font-weight: 800;
+}
+/* ----------------------------------- */
+/*              saveTime               */
+/* ----------------------------------- */
+.saveTime{
+    position: relative;
+    padding: 190rem 0 160rem 0;
+}
+.saveTime-spot1,
+.saveTime-spot2{
+    position: absolute;
+}
+.saveTime-spot1{
+    left: 0;
+    top: -50rem;
+    width: 160rem;
+}
+.saveTime-spot2{
+    right: 0;
+    bottom: -120rem;
+    width: 259rem;
+}
+.saveTime .section-content{
+    display: flex;
+    justify-content: space-between;
+}
+.saveTime .section-img{
+    position: relative;
+    width: 400rem;
+}
+.saveTime .section-img img{
+    position: absolute;
+    left: -130rem;
+    top: -120rem;
+    width: 450rem;
+    z-index: 2;
+}
+.saveTime .section-text{
+    display: inline-block;
+    width: 650rem;
+}
+.saveTime h2{
+    margin-bottom: 120rem;
+    text-align: left;
+    z-index: 2;
+}
+.saveTime h2::after{
+    left: 0;
+    transform: translate(0);
+}
+.saveTime .section-text p{
+    margin-bottom: 85rem;
+}
+.saveTime .section-text p:last-child{
+    margin-bottom: 0;
+}
+
+/* ----------------------------------- */
+/*          moneyGuarantee             */
+/* ----------------------------------- */
+.moneyGuarantee .section-content{
+    display: flex;
+    justify-content: space-between;
+}
+.moneyGuarantee figure{
+    display: inline-block;
+    max-width: 420rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18rem;
+    line-height: 28rem;
+}
+.moneyGuarantee figure .figure-title{
+    margin-bottom: 16rem;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+}
+.moneyGuarantee figure .svg-box{
+    max-height: 250px;
+    margin-bottom: 30rem;
+}
+.moneyGuarantee figure .svg-box svg{
+    width: 250rem;
+}
+
+/* -------------------------------------------------------- */
+/*                          footer                          */
+/* -------------------------------------------------------- */
+footer{
+    padding: 130rem  0 40rem;
+    position: relative;
+    color: var(--third-text-color);
+    font-weight: 700;
+    font-size: 18rem;
+    line-height: 22rem;
+    background: var(--four-bg-color);
+}
+footer .wrapper{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.footer-spot{
+    position: absolute;
+    left: 0;
+    bottom: 40rem;
+    width: 106rem;
+}
+.footer-pay-title{
+    margin-bottom: 20px;
+}
+.footer-pay-img img{
+    margin-right: 7px;
+    padding: 5px 17px;
+    width: 50rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+}
+.footer-pay-img img:last-child{
+    margin-right: 0;
+}
+.copy{
+    margin-right: 50rem;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16rem;
+    line-height: 19rem;
+    letter-spacing: 0.05rem;
+    opacity: 0.4;
+    color: var(--third-text-color);
+}
+.footer-btns{
+    display: inline-block;
+    letter-spacing: 0.05em;
+}
+.footer-btns a:first-child{
+    margin-right: 30px;
+}
+.thirst-btn{
+    display: inline-block;
+    padding: 20rem 30rem;
+    position: relative;
+    padding-left: 40px;
+    color: var(--third-text-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18rem;
+    line-height: 22rem;
+    letter-spacing: 0.05em;
+    transition: .5s;
+}
+.thirst-btn svg{
+    position: absolute;
+    width: 50rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.thirst-btn:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1620px){
+    html{
+        font-size: 0.95px;
+    }
+}
+@media screen and (max-width: 1440px){
+    html{
+        font-size: 0.88px;
+    }
+}
+@media screen and (max-width: 1375px){
+    html{
+        font-size: 0.83px;
+    }
+    .saveTime .section-img img{
+        top: -60rem;
+    }
+    .copy{
+        margin-right: 15rem;
+    }
+}
+@media screen and (max-width: 1320px){
+    html{
+        font-size: 0.79px;
+    }
+}
+@media screen and (max-width: 1265px){
+    .stagesWork .section-content{
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width: 1200px){
+    html{
+        font-size: 0.74px;
+    }
+    .saveTime .section-img img{
+        top: -20rem;
+    }
+    .footer-info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .copy{
+        order: 1;
+        width: 50%;
+    }
+    .footer-btns{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+}
+@media screen and (max-width: 1100px){
+    html{
+        font-size: 0.7px;
+    }
+    .header-info-img img{
+        width: 600rem;
+    }
+    .saveTime .section-img img{
+        width: 400rem;
+    }
+}
+@media screen and (max-width: 1000px){
+    html{
+        font-size: 0.6px;
+    }
+    .figure-title{
+        min-height: 75px;
+    }
+    .header-spot1 img{
+        width: 225rem;
+    }
+    .header-spot2 img{
+        width: 200rem;
+    }
+    /* ----------------------------------- */
+    /*              saveTime               */
+    /* ----------------------------------- */
+    .saveTime .section-img img{
+        top: 0;
+    }
+    /* ----------------------------------- */
+    /*          moneyGuarantee             */
+    /* ----------------------------------- */
+    .moneyGuarantee .section-content{
+        flex-direction: column;
+    }
+    .moneyGuarantee figure{
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        width: 100%;
+        text-align: left;
+    }
+    .moneyGuarantee figure:first-child{
+        margin-bottom: 0;
+    }
+    .moneyGuarantee figure .svg-box{
+        margin: 0;
+        margin-right: 30rem;
+    }
+    .figure-title {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 1015px){
+    .footer-info{
+        max-width: 305px;
+    }
+}
+@media screen and (max-width: 860px){
+    html{
+        font-size: 0.55px;
+    }
+}
+@media screen and (max-width: 785px){
+    .header-nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-logo{
+        margin-bottom: 25rem;
+    }
+    .header-info{
+        padding-top: 35rem;
+    }
+    .primary-btn, 
+    .secondary-btn{
+        font-size: 20rem;
+    }
+    main{
+        font-size: 25rem;
+    }
+    header{
+        padding-bottom: 140rem;
+        font-size: 28rem;  
+    }
+    header .thirst-btn{
+        font-size: 28rem;  
+        line-height: 32rem;
+    }
+    .header-info-img,
+    .saveTime .section-img{
+        display: none;
+    }
+    .stagesWork figure{
+        font-size: 28rem;
+        line-height: 36rem;
+    }
+    .saveTime{
+        padding: 150rem 0;
+    }
+    .saveTime .section-text{
+        width: 100%;
+        font-size: 30rem;
+    }
+    .moneyGuarantee figure{
+        font-size: 23rem;
+        line-height: 30rem; 
+    }
+    footer .primary-btn{
+        font-size: 16rem;
+    }
+    /* ----------------------------------- */
+    /*                 footer              */
+    /* ----------------------------------- */
+
+}
+@media screen and (max-width: 735px){
+    .footer-spot{
+        top: -50rem;
+    }
+    footer .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-pay{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .footer-info{
+        justify-content: center;
+    }
+    .copy{
+        margin: 0;
+        width: auto;
+    }
+}
+@media screen and (max-width: 725px){
+    /* ----------------------------------- */
+    /*          serviceAdvantages          */
+    /* ----------------------------------- */
+    
+    .serviceAdvantages .section-content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .serviceAdvantages .section-content figure{
+        margin-bottom: 100rem;
+        min-width: 100%;
+    }
+    .serviceAdvantages .section-content figcaption{
+        font-size: 20px;
+    }
+    .serviceAdvantages .svg-box svg{
+        width: 175px;
+        height: 175px;
+    }
+
+}
+@media screen and (max-width: 650px){
+    .saveTime .section-img img{
+        top: 0;
+    }
+
+    /* ----------------------------------- */
+    /*          moneyGuarantee             */
+    /* ----------------------------------- */
+
+    .moneyGuarantee .section-content{
+        flex-direction: column;
+    }
+    .moneyGuarantee figure{
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .moneyGuarantee figure:first-child{
+        margin-bottom: 50px;
+    }
+    .moneyGuarantee figure .svg-box svg{
+        width: 200px;
+    }
+    .figure-title {
+        min-height: auto;
+    }
+}
+@media screen and (max-width: 625px){
+    .header-menu{
+        display: block;
+        width: 100%;    
+    }
+    .phone-header-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+    .phone-header-menu li{
+        margin-right: 0;
+    }
+    .header-menu li .thirst-btn {
+        padding-left: 30px;
+    }
+    .header-menu .thirst-btn svg{
+        width: 24px;
+        height: 24px;
+    }
+    .header-menu .logIn-btn{
+        display: flex;
+        justify-content: center;
+    }
+    .header-menu li .primary-btn{
+        /* width: 100%; */
+    }
+}
+@media screen and (max-width: 400px){
+    .header-spot2{
+        bottom: -100rem;
+    }
+    .header-spot1 img{
+        width: 175rem;
+    }
+    .header-menu li .thirst-btn {
+        padding-left: 25px;
+    }
+    .header-menu .thirst-btn svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+@media screen and (max-width: 375px){
+    .footer-btns{
+        flex-direction: column;
+    }
+    .footer-btns a:first-child{
+        margin: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* -------------------------------------------------------- */
+/*                          popup                           */
+/* -------------------------------------------------------- */
+
+.order-popup{
+    display: none;
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    padding: 20px;
+    font-size: 16px;
+    border: 2px solid var(--second-border-color);
+    background: var(--primary-bg-color);
+    border-radius: 10px;
+    z-index: 15;
+}
+.order-done-text{
+    font-weight: bold;
+    color: rgb(95, 179, 95);
+}
+.order-fail-text{
+    font-weight: bold;
+    color: lightcoral;
+}
+
+.show-order-popup{
+    display: block;
+}
+
+@media screen and (max-width: 650px){
+    .order-popup{
+        left: 10px;
+        bottom: 10px;
+        font-size: 12px;
+        padding: 15px;
+    }
+}

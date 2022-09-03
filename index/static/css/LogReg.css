@@ -1,0 +1,140 @@
+@import url(style.css);
+
+.logReg-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--four-bg-color);
+    height: 100vh;     
+}
+.reg-box{
+    position: relative;
+    padding: 70rem;
+    max-width: 310rem;
+    background: var(--primary-bg-color);
+    border-radius: 10px;
+    box-shadow: 0px 20px 100px rgba(18, 24, 32, 0.05);
+}
+.close{
+  position: absolute;  
+  top: 25rem;
+  right: 25rem;
+  width: 25px;
+  height: 24px;
+  cursor: pointer; 
+}
+.close span{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 25px;
+    height: 3px;
+    background: var(--four-bg-color);
+    transform: rotate(45deg);
+}
+.close span:last-child{
+    transform: rotate(-45deg);
+}
+.reg-title{
+    text-align: center;
+    margin-bottom: 35rem;
+}
+.reg-title img{
+    width: 135rem;
+}
+.reg-form label{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15rem;
+    width: 100%;
+}
+.reg-form label svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22rem;
+}
+.reg-form input{
+    padding: 17rem 25rem;
+    width: calc(100% - 50rem - 2px);
+    border: 1px solid var(--primary-border-color);
+    border-radius: 10px;
+}
+.reg-form .primary-btn{
+    width: 100%;
+    font-size: 14rem;
+    line-height: 17rem;
+    border: 1px solid var(--third-bg-color);
+}
+.reg-form .log-btns label:first-child{
+    margin-bottom: 0;
+}
+.reg-form .log-btns .primary-btn{
+    height: 100%;   
+}
+
+/* -------------------------------------------------------- */
+/*                         Log In                           */
+/* -------------------------------------------------------- */
+.logIn-form{
+    margin-bottom: 40rem;
+}
+.log-btns{
+    display: flex;
+    justify-content: space-between;
+}
+.log-btns label{
+    display: inline-block;
+    width: auto;
+}
+.log-btns label:first-child{
+    margin-right: 15rem;
+}
+.logIn-form .log-btns label:first-child{
+    margin-bottom: 15rem;
+}
+.logIn-form .primary-btn{
+    width: calc(130rem - 2px);
+    height: 100%;
+}
+.logIn-form .secondary-btn{
+    margin-bottom: 15rem;
+    width: calc(165rem - 2px);
+    text-align: center;
+    font-size: 14rem;
+    line-height: 17rem;
+    border: 1px solid var(--third-bg-color);
+}
+.logInWith p{
+    position: relative;
+    margin-bottom: 25rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18rem;
+    line-height: 20rem;
+    color: var(--primary-text-color);
+}
+.logInWith p::before,
+.logInWith p::after{
+    content: " ";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60rem;
+    height: 1px;
+    background: var(--second-bg-color);
+}
+.logInWith p::before{
+   left: 0;
+}
+.logInWith p::after{
+    right: 0;
+}
+.logInWith-services{
+    display: flex;
+    justify-content: center;
+}
+.logInWith-services svg{
+    width: 75rem;
+    height: 75rem;
+}
