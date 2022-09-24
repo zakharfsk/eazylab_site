@@ -55,7 +55,7 @@ def ordering_form(request: WSGIRequest) -> HttpResponse:
                               f'Вартість роботи: {order.cost_work}.\n' \
                               f'Опис роботи: {order.description}.\n'
                 files = {
-                    'chat_id': (None, '-1001703899156'),
+                    'chat_id': (None, -1001703899156),
                     'photo': open(f'{order.file_order.path}', 'rb'),
                     'caption': (None, message_bot),
                     'parse_mode': (None, 'HTML'),
@@ -95,7 +95,7 @@ def ordering_form(request: WSGIRequest) -> HttpResponse:
                               f'Опис роботи: {order.description}.\n' \
 
                 files = {
-                    'chat_id': (None, '-1001703899156'),
+                    'chat_id': (None, -1001703899156),
                     'text': (None, message_bot),
                 }
 
