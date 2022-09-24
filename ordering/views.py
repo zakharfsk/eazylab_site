@@ -47,7 +47,7 @@ def ordering_form(request: WSGIRequest) -> HttpResponse:
                 message_bot = f'<b>Нове замовлення № {order.id}</b>.\n\n' \
                               f'Статус замовлення: {order.status_order_id}.\n' \
                               f'Користувач: {order.user}.\n' \
-                              f'Дата створення: {order.date_created}.\n\n' \
+                              f'Дата створення: {order.date_created.strftime("%d.%m.%Y %H:%M")}.\n\n' \
                               f'Тип роботи: {order.type_work}.\n' \
                               f'Предмет: {order.subject}.\n' \
                               f'Назва роботи: {order.name_work}.\n' \
@@ -86,7 +86,7 @@ def ordering_form(request: WSGIRequest) -> HttpResponse:
                 message_bot = f'Нове замовлення № {order.id}.\n\n' \
                               f'Статус замовлення: {order.status_order_id}.\n' \
                               f'Користувач: {order.user}.\n' \
-                              f'Дата створення: {order.date_created}.\n\n' \
+                              f'Дата створення: {order.date_created.strftime("%d.%m.%Y %H:%M")}.\n\n' \
                               f'Тип роботи: {order.type_work}.\n' \
                               f'Предмет: {order.subject}.\n' \
                               f'Назва роботи: {order.name_work}.\n' \
