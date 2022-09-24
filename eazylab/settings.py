@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['http://127.0.0.1', 'https://eazylab.pp.ua', 'https://www.eazylab.pp.ua']
+ALLOWED_HOSTS = ['127.0.0.1', 'eazylab.pp.ua', 'www.eazylab.pp.ua']
 CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1', 'https://eazylab.pp.ua', 'https://www.eazylab.pp.ua']
 
 
