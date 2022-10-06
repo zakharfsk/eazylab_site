@@ -1,5 +1,4 @@
 import os
-from datetime import datetime
 import requests
 from django.contrib.auth.decorators import login_required
 from django.core.handlers.wsgi import WSGIRequest
@@ -7,7 +6,6 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from loguru import logger
 
-from eazylab.settings import BASE_DIR
 from ordering.forms import OrderingForm
 from ordering.models import Order, StatusOrder
 

@@ -15,7 +15,8 @@ from .models import ProfileUser
 @logger.catch
 def login_page(request: WSGIRequest) -> HttpResponse:
     context = {
-        'title': 'Логін'
+        'title': 'Логін',
+        'error': '',
     }
 
     if request.method == 'POST':
@@ -30,6 +31,9 @@ def login_page(request: WSGIRequest) -> HttpResponse:
             if user is not None and not request.user.is_authenticated:
                 login(request, user)
                 return redirect('home')
+        else:
+            for msg in form.errors:
+                context['error'] += form.errors[msg]
 
     return render(request, 'account/login.html', context)
 
@@ -37,12 +41,14 @@ def login_page(request: WSGIRequest) -> HttpResponse:
 @logger.catch
 def register_page(request: WSGIRequest) -> HttpResponse:
     context = {
-        'title': 'Реєстрація'
+        'title': 'Реєстрація',
+        'error': '',
     }
 
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         logger.info(f'Sing Up Form: {form.is_valid()}')
+        logger.info(f'Log In Form Errors: {form.errors}')
         profile = ProfileUser()
         if form.is_valid():
             form.save()
@@ -55,6 +61,9 @@ def register_page(request: WSGIRequest) -> HttpResponse:
 
             login(request, user)
             return redirect('home')
+        else:
+            for msg in form.errors:
+                context['error'] += form.errors[msg]
 
     return render(request, 'account/register.html', context)
 
